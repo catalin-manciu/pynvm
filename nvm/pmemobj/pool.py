@@ -925,7 +925,7 @@ class PersistentObjectPool(object):
                         if oid == self.mm.OID_NULL:
                             continue
                         if oid not in substructures[type_num]:
-                            log.error("%s points to subsctructure type %s"
+                            log.error("%s points to substructure type %s"
                                       " at %s, but we didn't find it in"
                                       " the pmemobj object list.",
                                       container_oid, type_num, oid)

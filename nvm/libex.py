@@ -65,7 +65,11 @@ pmemobj_structs = """
         PObject ob_base;
         PObjPtr ob_dict;
         } PObjectObject;
-
+    typedef struct {
+        PVarObject ob_base;
+        PObjPtr dtypestr;
+        PObjPtr data;
+        } PNPArrayObject;
     """
 
 ffi.set_source("_pmem",
